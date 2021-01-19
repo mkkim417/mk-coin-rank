@@ -68,6 +68,7 @@ src
 * styled-components : CSS in JS를 사용한 스타일링
 * styled-reset : 브라우저마다 다른 렌더링을 최대한 피하기 위해 Reset CSS 사용
 * react-app-polyfill : IE 11 지원을 위한 Polyfill
+* core-js : IE 11에서 styled-component를 지원하기 위해 사용
 * husky, lint-staged, prettier : 코드 포매팅을 위한 라이브러리
   
 ## 비고
