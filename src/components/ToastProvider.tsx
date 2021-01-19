@@ -31,7 +31,7 @@ export function ToastProvider({ children }: ToastProviderProps) {
       content,
       status,
     };
-    //setToastItems((prevItems) => [...prevItems, newToast]);
+    setToastItems((prevItems) => [...prevItems, newToast]);
 
     //toast auto close
     setTimeout(() => {
