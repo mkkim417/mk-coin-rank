@@ -29,6 +29,14 @@ const CoinExchangeRate: React.FC<CoinExchangeRateProps> = ({
     const nextCryptoValue = formatNumber(value, 8);
 
     setCryptoValue(nextCryptoValue);
+    setCurrencyValue(
+      formatNumber(
+        new BigNumber(nextCryptoValue.replace(/[^0-9.]/g, ''))
+          .multipliedBy(exchangeRate)
+          .toFixed(),
+        targetCurrencyDecimalLimit,
+      ),
+    );
 
     const prevCommaNum = (
       cryptoValue
@@ -114,7 +122,8 @@ const CoinExchangeRate: React.FC<CoinExchangeRateProps> = ({
         targetCurrencyDecimalLimit,
       ),
     );
-  }, [exchangeRate, cryptoValue, targetCurrencyDecimalLimit]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exchangeRate, targetCurrencyDecimalLimit]);
 
   return (
     <CoinExchangeRateContainer>
