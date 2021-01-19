@@ -30,8 +30,6 @@ src
 │   ├── Toast.tsx                   # 토스트 기본 아이템 컴포넌트
 │   ├── ToastProvider.tsx           # 토스트를 제공하는 프로바이더, Context 사용, useToast Hooks을 제공한다
 │   └── index.ts                    # export of all components
-├── config
-│   └── index.ts
 ├── containers                      # 하나 이상의 기능을 수행하거나 여러 컴포넌트의 조합으로 이루어진 컴포넌트
 │   ├── CoinDescription.tsx         # 코인 설명을 toggle하는 Collapsible 컴포넌트
 │   ├── CoinExchangeRate.tsx        # 가상자산 <-> 실물통화 가격을 계산해주는 컴포넌트
