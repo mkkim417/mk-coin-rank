@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 
 interface TableProps {
@@ -6,13 +6,15 @@ interface TableProps {
   children: React.ReactNode;
 }
 
-export const Table: React.FC<TableProps> = ({ dark = false, children }) => {
-  return (
-    <StyledTable cellPadding="0" cellSpacing="0" dark={dark}>
-      {children}
-    </StyledTable>
-  );
-};
+export const Table: React.FC<TableProps> = memo(
+  ({ dark = false, children }) => {
+    return (
+      <StyledTable cellPadding="0" cellSpacing="0" dark={dark}>
+        {children}
+      </StyledTable>
+    );
+  },
+);
 
 const StyledTable = styled.table<{ dark: boolean }>`
   width: 100%;

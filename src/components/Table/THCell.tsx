@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 
 interface THCellProps {
@@ -6,9 +6,9 @@ interface THCellProps {
   children?: React.ReactNode;
 }
 
-export const THCell: React.FC<THCellProps> = ({ align, children }) => {
+export const THCell: React.FC<THCellProps> = memo(({ align, children }) => {
   return <StyledTh align={align ? align : 'left'}>{children}</StyledTh>;
-};
+});
 
 const StyledTh = styled.th<{
   align: 'left' | 'center' | 'right';
